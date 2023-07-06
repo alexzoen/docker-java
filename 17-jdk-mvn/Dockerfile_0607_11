@@ -1,0 +1,6 @@
+FROM openjdk:17-alpine
+WORKDIR /usr/bin/mvn
+COPY apache-maven-3.6.3 /usr/bin/mvn
+ENV MAVEN_HOME=/usr/bin/mvn
+ENV PATH=$MAVEN_HOME/bin:$PATH
+RUN apk --update add fontconfig openssh-client rsync git make
