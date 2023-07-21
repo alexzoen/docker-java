@@ -1,0 +1,6 @@
+FROM openjdk:17-jdk
+WORKDIR /usr/bin/mvn
+COPY apache-maven-3.9.3 /usr/bin/mvn
+ENV MAVEN_HOME=/usr/bin/mvn
+ENV PATH=$MAVEN_HOME/bin:$PATH
+ENV LANG en_US.utf8
